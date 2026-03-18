@@ -4,18 +4,74 @@
 <meta charset="UTF-8">
 <title>MAROTIXDEVTEAM</title>
 <style>
-body {font-family:sans-serif; background:#111; color:#fff; text-align:center; padding:40px;}
-h1 {color:#ffdd57; font-size:1.8rem;}
-p {margin:20px 0;}
-a.btn {display:inline-block; padding:10px 20px; background:#7289da; color:#fff; text-decoration:none; border-radius:5px;}
-a.btn:hover {background:#5b6eae;}
+body {
+    font-family: sans-serif;
+    background: linear-gradient(135deg, #111, #222);
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: bgAnim 10s infinite alternate;
+}
+
+/* Background animation */
+@keyframes bgAnim {
+    0% {background-position: 0 0;}
+    100% {background-position: 200px 200px;}
+}
+
+h1 {
+    color: #ffdd57;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+p {
+    margin-bottom: 30px;
+    font-size: 1rem;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {opacity: 0; transform: translateY(-10px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+a.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #7289da;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+    transition: transform 0.2s, background 0.2s;
+}
+
+a.btn:hover {
+    background: #5b6eae;
+    transform: scale(1.05);
+}
+
+/* Button pulse animation */
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.05);}
+    100% {transform: scale(1);}
+}
 </style>
 </head>
 <body>
 
 <h1>MAROTIXDEVTEAM</h1>
-<p>Join our Discord community!</p>
-<a href="https://discord.gg/CAnJG6Rw" class="btn" target="_blank">Join Discord</a>
+<p>Join our Discord community and stay connected!</p>
+<a href="YOUR_DISCORD_INVITE_LINK" class="btn" target="_blank">Join Discord</a>
 
 </body>
 </html>
