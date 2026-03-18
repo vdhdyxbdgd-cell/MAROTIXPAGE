@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAROTIXDEVTEAM</title>
+<style>
+body{margin:0;padding:40px;font-family:sans-serif;text-align:center;background:#111;color:#fff;overflow:hidden;}
+h1{color:#ffdd57;font-size:2rem;margin-bottom:15px;animation:floatText 3s ease-in-out infinite;}
+p{margin-bottom:20px;animation:fadeIn 2.5s ease-in-out;}
+a.btn{display:inline-block;padding:12px 25px;background:#7289da;color:#fff;text-decoration:none;border-radius:5px;font-weight:bold;animation:pulse 2s infinite;transition:transform 0.2s;}
+a.btn:hover{transform:scale(1.1);background:#5b6eae;}
+@keyframes fadeIn{0%{opacity:0;transform:translateY(-10px);}100%{opacity:1;transform:translateY(0);}}
+@keyframes floatText{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.1);}}
+.particle{position:absolute;width:4px;height:4px;background:#ffdd57;border-radius:50%;animation:moveParticles linear infinite;}
+@keyframes moveParticles{0%{transform:translate(0,0);}50%{transform:translate(50px,50px);}100%{transform:translate(0,0);}}
+</style>
+</head>
+<body>
+<h1>MAROTIXDEVTEAM</h1>
+<p>Join our Discord community and explore amazing projects!</p>
+<a href="https://discord.gg/FZvDMhdej" class="btn" target="_blank">Join Discord</a>
+<p>
+  <a href="tos.html" target="_blank">Terms of Service</a> | 
+  <a href="privacy.html" target="_blank">Privacy Policy</a>
+</p>
+<script>
+for(let i=0;i<50;i++){
+  let p=document.createElement('div');
+  p.className='particle';
+  p.style.top=Math.random()*100+'%';
+  p.style.left=Math.random()*100+'%';
+  p.style.width=p.style.height=(Math.random()*4+2)+'px';
+  p.style.animationDuration=(Math.random()*5+5)+'s';
+  document.body.appendChild(p);
+}
+</script>
+</body>
+</html>
